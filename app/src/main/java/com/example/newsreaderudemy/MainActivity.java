@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setTitle("Trending News");
         articleDB=this.openOrCreateDatabase("Articles",MODE_PRIVATE,null);
         articleDB.execSQL("CREATE TABLE IF NOT EXISTS articles (id INTEGER PRIMARY KEY,articleId INTEGER,title VARCHAR,content VARCHAR)");
         listView=(ListView)findViewById(R.id.listView);
